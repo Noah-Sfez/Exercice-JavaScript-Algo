@@ -12,7 +12,7 @@ for(let feux = 30; feux>=0; feux--  ){
     if(musiquealea === "Anissa - Wejdene"){
         console.log("éteins moi cette musique de merde !")
         Personnage.health --
-        console.log("Sa santé mentale est à " + Personnage.health)
+        console.log("La santé mentale de " + Personnage.name + " est à " + Personnage.health)
     }
     console.log(feux + " feux")
     if(feux == 0 && Personnage.health > 0){
@@ -24,5 +24,4 @@ for(let feux = 30; feux>=0; feux--  ){
     } else {
         continue
     }
-    
 }
