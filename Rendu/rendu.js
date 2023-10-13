@@ -2,6 +2,7 @@
 
 let victoireAttaquant = 0
 let victoireDefenseur = 0
+let manche = 0
 
 
 while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
@@ -15,7 +16,7 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
         break
     }
 
-    let manche = 0
+    
 
     let attaquant = []
     let defenseur = []
@@ -42,8 +43,8 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
 
     let defenseurNombreAleatoire = Math.floor(Math.random() * defenseur.length)
     let defenseurFirstAleatoire = defenseur[defenseurNombreAleatoire]
-
-    manche = manche++
+        
+    manche++
     console.log("Début de la manche : " + manche)
     console.log(attaquantFirstAleatoire.name + " et " + defenseurFirstAleatoire.name + " se rencontrent !")
 
