@@ -15,6 +15,8 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
         break
     }
 
+    let manche = 0
+
     let attaquant = []
     let defenseur = []
 
@@ -41,7 +43,8 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
     let defenseurNombreAleatoire = Math.floor(Math.random() * defenseur.length)
     let defenseurFirstAleatoire = defenseur[defenseurNombreAleatoire]
 
-    console.log("Début de la partie :")
+    manche = manche++
+    console.log("Début de la manche : " + manche)
     console.log(attaquantFirstAleatoire.name + " et " + defenseurFirstAleatoire.name + " se rencontrent !")
 
     let probaFirstDieAttaquant = Math.random()
@@ -72,16 +75,19 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
                     console.log("Les défenseurs ont perdu")
                     victoireAttaquant++
                     console.log("Les attaquants ont gagné " + victoireAttaquant + " fois !")
+                    console.log("----------------------------------------------------------------------------------")
                     break
                 } else if(attaquant.length == 0){
                     console.log("Les attaquants ont perdu")
                     victoireDefenseur++
                     console.log("Les défenseurs ont gagné " + victoireDefenseur + " fois !")
+                    console.log("----------------------------------------------------------------------------------")
                     break
                 }
             }
         } else {
             console.log("Le spike n'est pas amorcé")
+            console.log("Chacun a ses chances de gagner !")
             let probaWinDuelAttaquant = 0.5
             let probaWinDuelDefenseur = 0.5
             while(defenseur.length != 0 || attaquant.length != 0){
@@ -101,11 +107,13 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
                     console.log("Les défenseurs ont perdu")
                     victoireAttaquant++
                     console.log("Les attaquants ont gagné " + victoireAttaquant + " fois !")
+                    console.log("----------------------------------------------------------------------------------")
                     break
                 } else if(attaquant.length == 0){
                     console.log("Les attaquants ont perdu")
                     victoireDefenseur++
                     console.log("Les défenseurs ont gagné " + victoireDefenseur + " fois !")
+                    console.log("----------------------------------------------------------------------------------")
                     break
                 }
             }
@@ -116,6 +124,7 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
         let probaSpike = 0.4
         if(probaSpike>Math.random()){
             console.log("Le spike est amorcé")
+            console.log("Les attaquants prennent l'avantage !")
             let probaWinDuelAttaquant = 0.7
             let probaWinDuelDefenseur = 0.3
             while(defenseur.length != 0 || attaquant.length != 0){
@@ -135,16 +144,19 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
                     console.log("Les défenseurs ont perdu")
                     victoireAttaquant++
                     console.log("Les attaquants ont gagné " + victoireAttaquant + " fois !")
+                    console.log("----------------------------------------------------------------------------------")
                     break
                 } else if(attaquant.length == 0){
                     console.log("Les attaquants ont perdu")
                     victoireDefenseur++
                     console.log("Les défenseurs ont gagné " + victoireDefenseur + " fois !")
+                    console.log("----------------------------------------------------------------------------------")
                     break
                 }
             }
         }else{
             console.log("Le spike n'est pas amorcé")
+            console.log("Coup dur pour les attaquants, mais ils ont encore toutes leurs chances de gagner !")
             let probaWinDuelAttaquant = 0.5
             let probaWinDuelDefenseur = 0.5
             while(defenseur.length != 0 || attaquant.length != 0){
@@ -164,11 +176,13 @@ while(victoireAttaquant<=13 &&  victoireDefenseur<=13){
                     console.log("Les défenseurs ont perdu")
                     victoireAttaquant++
                     console.log("Les attaquants ont gagné " + victoireAttaquant + " fois !")
+                    console.log("----------------------------------------------------------------------------------")
                     break
                 } else if(attaquant.length == 0){
                     console.log("Les attaquants ont perdu")
                     victoireDefenseur++
                     console.log("Les défenseurs ont gagné " + victoireDefenseur + " fois !")
+                    console.log("----------------------------------------------------------------------------------")
                     break
                 }
             }
